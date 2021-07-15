@@ -93,6 +93,8 @@ def preprocess_user_location(text):
 print(preprocess_user_location('Doha, Qatar    ####'))
 #Converts it to Doha, Qatar
 
+print(preprocess_user_location(' USA     '))
+#Converts it to USA
 
 
 
