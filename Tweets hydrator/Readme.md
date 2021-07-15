@@ -1,9 +1,7 @@
-# Guide to use Tweet Hydrator
-
+# Tweets Hydrator Usage Guide
 
 ## Description
 This Java-based program hydrates tweets from the Twiteer APIs. The tool makes 180 API calls per 15 minutes. Each API call downloads up to 100 tweets i.e. it can download up to 72,000 tweets per hour.
-
 
 ## How to use
 
@@ -11,8 +9,11 @@ This Java-based program hydrates tweets from the Twiteer APIs. The tool makes 18
 2. Make a Twitter app (if you don't have one) to get the following four tokens. Once obtained, add them into the `twitter.properties` file.
 
 `consumer.key=XXXX`
+
 `consumer.secret=XXXX`
+
 `access.token=XXXX`
+
 `access.token.secret=XXXX`
 
 3. Run the `tweets_hydrrator.jar` file from the package folder as shown in the following command. The command excepts two parameters. The first parameter is the file containing tweets-ids. And, the second parameter is the path and name of output file where the tool should store the downloaded tweets.
