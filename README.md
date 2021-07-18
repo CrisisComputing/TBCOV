@@ -13,4 +13,10 @@ provides a tool written in the Java language that takes tweet-ids as input and r
 Different types of preprocessing were applied on different attributes before using them for any analysis. The preprocessing is important to replicate results. The code reposity provides several scripts used to preprocess different fileds. The preprocessing scripts are avaialablel [here](https://github.com/CrisisComputing/TBCOV/tree/main/preprocessing).
 
 # 3. Tweets parsers
-TBA 
+TBA
+
+# 4. Release meta-file
+TBA
+
+# 5. Parsing using meta-file
+TBA
