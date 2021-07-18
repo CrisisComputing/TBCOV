@@ -1,15 +1,6 @@
-#USER LOCATION PREPROCESSING
-
 #!/usr/bin/python3.7.0
 
-"""
-   Created by Umair Qazi - 
-   Research Assistant at 
-   Qatar Computing Research Institute
-   Jul 15, 2018
-"""
-
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 from cleantext import clean
 import re
 import emoji
@@ -22,11 +13,9 @@ PUNCT_TRANSLATE_UNICODE = dict.fromkeys(
 )
 
 def preprocess_user_location(text):
-    #print("Orginal: " + text)
 
     if(text == None):
         return None
-    
     text = text.strip()
     # remove URLs
     text = re.sub('((www\.[^\s]+)|(https?://[^\s]+)|(http?://[^\s]+))', ' ', text)
@@ -72,7 +61,7 @@ def preprocess_user_location(text):
     text = text.translate(PUNCT_TRANSLATE_UNICODE)
 
     text = text.replace('<<<<comma>>>>',',')
-    
+
     #remove extra spaces
     text = re.sub(' +', ' ', text)
 
@@ -87,14 +76,9 @@ def preprocess_user_location(text):
     else:
         return None
 
-
-
 #some tests
 print(preprocess_user_location('Doha, Qatar    ####'))
 #Converts it to Doha, Qatar
 
 print(preprocess_user_location(' USA     '))
 #Converts it to USA
-
-
-
