@@ -1,5 +1,5 @@
 # TBCOV: Two Billion Multilingual COVID-19 Tweets with Sentiment, Entity, Geo, and Gender Labels
-Welcome to the code repository for the TBCOV dataset hosted on the CrisisNLP repository and available through [https://crisisnlp.qcri.org/tbcov](https://crisisnlp.qcri.org/tbcov). This code repository offers several scripts helpful to hydrate and process the shared dataset.
+Welcome to the code repository for the TBCOV dataset hosted on the CrisisNLP repository and available through [https://crisisnlp.qcri.org/](https://crisisnlp.qcri.org/). This code repository offers several scripts helpful to hydrate and process the shared dataset.
 
 The TBCOV dataset comprises more than two billion tweets from 218 countries worldwide. The following map shows worldwide tweets normalized by the total population from each country per 100,000 persons.
 
