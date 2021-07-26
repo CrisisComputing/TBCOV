@@ -5,9 +5,6 @@ The TBCOV dataset comprises more than two billion tweets from 218 countries worl
 
 ![Tweets normalized by countries population](figs/worldwide_normalized_tweets.png)
 
-# Base release data files
-The base release data files are available to download from [https://crisisnlp.qcri.org/tbcov](https://crisisnlp.qcri.org/tbcov).
-
 # Data descriptor for base release files
 |Attribute|Type|Description|
 |--- |--- |--- |
