@@ -53,11 +53,8 @@ provides a tool written in the Java language that takes tweet-ids as input and r
 # Preprocessing
 Different types of preprocessing were applied on different attributes before using them for any analysis. The preprocessing is important to replicate results. The code reposity provides several scripts used to preprocess different fileds. The preprocessing scripts are avaialablel [here](https://github.com/CrisisComputing/TBCOV/tree/main/preprocessing).
 
-# Tweets parsers
-These tweets parsers will help parse the base release files. The idea is to take as input a criteria and retrieve matcing tweets. TBA soon.
-
 # Meta-data file
-We are preparing a meta-data file which will be helpful to extract tweets details from the base release pertaining to a specific language or country. TBA soon.
+We are preparing a meta-data file which will be helpful to extract tweets details from the base release pertaining to a specific language or country. The meta-data file is available [here](https://github.com/CrisisComputing/TBCOV/tree/main/meta_data)
 
 # Parsing using meta-file
-We are preparing parsers that will be the meta-data file for relevant tweets extraction from the base release. TBA soon.
+We are preparing parsers that will be the meta-data file for relevant tweets extraction from the base release. Meta-data based retrieval of tweets can be performed using scripts [here](https://github.com/CrisisComputing/TBCOV/tree/main/parsers)
