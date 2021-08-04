@@ -1,7 +1,7 @@
 import sys
 
 #Sample output run
-#python meta_file_parser.py test_for_meta_parsing.txt meta-file.txt
+#python meta_file_parser.py test_for_meta_parsing.txt meta_data/meta_file_monthly_ids_range.tsv
 
 
 #Pass the country/lang file that you want to extract
