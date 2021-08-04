@@ -21,9 +21,6 @@ output_file = open(sys.argv[2].replace('.txt', '') + "_detailed.tsv", "w+")
 
 #This function is for inserting a value in a dictionary
 def insert_in_dict(dictionary, key, value):
-    #check key
-    # key
-    # value
     if key in dictionary:
         dictionary[key] = value
     else:
@@ -36,25 +33,30 @@ def insert_in_dict(dictionary, key, value):
 ids_dict = {}
 
 for line in ids_file:
-	insert_in_dict(ids_dict, line.strip(), True)
+    insert_in_dict(ids_dict, line.strip(), True)
 
 ids_file.close()
 
-output_file.write("tweet_id	date_time	lang	user_id	retweeted_id	quoted_id	in_reply_to_id	sentiment_conf	sentiment_label	user_type	gender_label	tweet_text_named_entities	geo_coordinates_lat_lon	geo_country_code	geo_state	geo_county	geo_city	place_bounding_box	place_country_code	place_state	place_county	place_city	user_loc_toponym	user_loc_country_code	user_loc_state	user_loc_county	user_loc_city	User_profile_description_toponyms	user_profile_description_country_code	user_profile_description_state	user_profile_description_county	user_profile_description_city	tweet_text_toponyms	tweet_text_country_code	tweet_text_state	tweet_text_county	tweet_text_city")
+output_file.write("tweet_id date_time   lang    user_id retweeted_id    quoted_id   in_reply_to_id  sentiment_conf  sentiment_label user_type   gender_label    tweet_text_named_entities   geo_coordinates_lat_lon geo_country_code    geo_state   geo_county  geo_city    place_bounding_box  place_country_code  place_state place_county    place_city  user_loc_toponym    user_loc_country_code   user_loc_state  user_loc_county user_loc_city   User_profile_description_toponyms   user_profile_description_country_code   user_profile_description_state  user_profile_description_county user_profile_description_city   tweet_text_toponyms tweet_text_country_code tweet_text_state    tweet_text_county   tweet_text_city")
 output_file.write('\n')
-
+print('\n')
+print("Parsing stated... wait for the data extraction....")
 
 #Extract the required full items
 for key in meta_parser_output:
 
-	file_to_be_read = open(base_release_file_path + key.strip())
+    file_to_be_read = open(base_release_file_path + key.strip())
 
-	for full_info_line in file_to_be_read:
 
-		data = full_info_line.split('\t')
+    for full_info_line in file_to_be_read:
 
-		if(ids_dict.get(data[0]) != None):
-			output_file.write(full_info_line)
+        data = full_info_line.split('\t')
+
+        if(ids_dict.get(data[0]) != None):
+            output_file.write(full_info_line)
+
+    print('\n')
+    print(key.strip() + " file completely parsed *******")
 
 output_file.close()
 
