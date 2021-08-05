@@ -64,7 +64,7 @@ This meta-data file will be used to extract tweet details from the base release 
 # Parsing using meta-file
 In the folder [parsers](https://github.com/CrisisComputing/TBCOV/tree/main/parsers), there are two scripts that are needed to extract the tweet details from base release files, given a specific language or country IDs file.
 
-[meta_file_parser.py](https://github.com/CrisisComputing/TBCOV/blob/main/parsers/meta_file_parser.py) requires two arguments as input.
+* [meta_file_parser.py](https://github.com/CrisisComputing/TBCOV/blob/main/parsers/meta_file_parser.py) requires two arguments as input.
 1. Country/Language IDs file 
 1. [meta_file_monthly_ids_range.tsv](https://github.com/CrisisComputing/TBCOV/blob/main/meta_data/meta_file_monthly_ids_range.tsv)
 
@@ -80,7 +80,7 @@ february_2020_f1.tsv`
 Each line indicates which monthly base file is required for download so that it can be used to extract tweet details with the help of the next script.
 
 
-[base_file_data_extractor.py](https://github.com/CrisisComputing/TBCOV/blob/main/parsers/base_file_data_extractor.py) requires three arguments as input.
+* [base_file_data_extractor.py](https://github.com/CrisisComputing/TBCOV/blob/main/parsers/base_file_data_extractor.py) requires three arguments as input.
 1. `required_monthly_files.txt` which the output of the previous script
 1. Country/Language IDs file
 1. Base release files path  (expects '/' at the end - for example - /home/downloads/)
