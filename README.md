@@ -64,15 +64,29 @@ This meta-data file will be used to extract tweet details from the base release 
 # Parsing using meta-file
 In the folder [parsers](https://github.com/CrisisComputing/TBCOV/tree/main/parsers), there are two scripts that are needed to extract the tweet details from base release files, given a specific language or country IDs file.
 
-[meta_file_parser.py](https://github.com/CrisisComputing/TBCOV/blob/main/parsers/meta_file_parser.py) required two inputs.
+[meta_file_parser.py](https://github.com/CrisisComputing/TBCOV/blob/main/parsers/meta_file_parser.py) requires two arguments as input.
 1. Country/Language IDs file 
 1. [meta_file_monthly_ids_range.tsv](https://github.com/CrisisComputing/TBCOV/blob/main/meta_data/meta_file_monthly_ids_range.tsv)
 
-`#python meta_file_parser.py test_for_meta_parsing.txt meta_data/meta_file_monthly_ids_range.tsv`
+Sample to run the script is as follows:
+`python meta_file_parser.py [IDs file] meta_data/meta_file_monthly_ids_range.tsv`
+
+And it creates an output file name `required_monthly_files.txt` 
+The contents of the above file look something like this:
+`february_2020_f3.tsv
+february_2020_f2.tsv
+february_2020_f1.tsv`
+
+Each line indicates which monthly base file is required for download so that it can be used to extract tweet details with the help of the next script.
 
 
+[base_file_data_extractor.py](https://github.com/CrisisComputing/TBCOV/blob/main/parsers/base_file_data_extractor.py) requires three arguments as input.
+1. `required_monthly_files.txt` which the output of the previous script
+1. Country/Language IDs file
+1. Base release files path  (expects '/' at the end - for example - /home/downloads/)
+
+Sample to run the script is as follows:
 `python base_file_data_extractor.py required_monthly_files.txt test_for_meta_parsing.txt '/some/path'`
 
+The output will be a .tsv file which will have the same formate as montly base files.
 
-
-We are preparing parsers that will be the meta-data file for relevant tweets extraction from the base release. Meta-data based retrieval of tweets can be performed using scripts [here](https://github.com/CrisisComputing/TBCOV/tree/main/parsers)
