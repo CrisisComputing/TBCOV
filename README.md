@@ -62,7 +62,17 @@ Different types of preprocessing were applied on different attributes before usi
 This meta-data file will be used to extract tweet details from the base release pertaining to a specific language or country.
 
 # Parsing using meta-file
-`<addr>` Just a test.
+In the folder [parsers](https://github.com/CrisisComputing/TBCOV/tree/main/parsers), there are two scripts that are needed to extract the tweet details from base release files, given a specific language or country IDs file.
+
+[meta_file_parser.py](https://github.com/CrisisComputing/TBCOV/blob/main/parsers/meta_file_parser.py) required two inputs.
+1. Country/Language IDs file 
+1. [meta_file_monthly_ids_range.tsv](https://github.com/CrisisComputing/TBCOV/blob/main/meta_data/meta_file_monthly_ids_range.tsv)
+
+`#python meta_file_parser.py test_for_meta_parsing.txt meta_data/meta_file_monthly_ids_range.tsv`
+
+
+`python base_file_data_extractor.py required_monthly_files.txt test_for_meta_parsing.txt '/some/path'`
+
 
 
 We are preparing parsers that will be the meta-data file for relevant tweets extraction from the base release. Meta-data based retrieval of tweets can be performed using scripts [here](https://github.com/CrisisComputing/TBCOV/tree/main/parsers)
