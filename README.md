@@ -54,7 +54,7 @@ provides a tool written in the Java language that takes tweet-ids as input and r
 Different types of preprocessing were applied on different attributes before using them for any analysis. The preprocessing is important to replicate results. The code reposity provides several scripts used to preprocess different fileds. The preprocessing scripts are avaialablel [here](https://github.com/CrisisComputing/TBCOV/tree/main/preprocessing).
 
 # Meta-data file
-[meta_file_monthly_ids_range.tsv](https://github.com/CrisisComputing/TBCOV/blob/main/meta_data/meta_file_monthly_ids_range.tsv) file lists the starting and ending tweet IDs contained in the specific monthly base file as follows:
+[meta_file_monthly_ids_range.tsv](https://github.com/CrisisComputing/TBCOV/blob/main/meta_data/meta_file_monthly_ids_range.tsv) file lists range of tweet IDs (between Start_id and End_id) contained in the specific monthly base file as follows:
 |File_name|Start_id|End_id|
 |--- |--- |--- |
 |february_2020_f1.tsv|1223395535882768385|1231201257739649025|
@@ -62,4 +62,7 @@ Different types of preprocessing were applied on different attributes before usi
 This meta-data file will be used to extract tweet details from the base release pertaining to a specific language or country.
 
 # Parsing using meta-file
+`<addr>` Just a test.
+
+
 We are preparing parsers that will be the meta-data file for relevant tweets extraction from the base release. Meta-data based retrieval of tweets can be performed using scripts [here](https://github.com/CrisisComputing/TBCOV/tree/main/parsers)
