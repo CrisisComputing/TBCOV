@@ -54,31 +54,30 @@ provides a tool written in the Java language that takes tweet-ids as input and r
 Different types of preprocessing were applied on different attributes before using them for any analysis. The preprocessing is important to replicate results. The code reposity provides several scripts used to preprocess different fileds. The preprocessing scripts are avaialablel [here](https://github.com/CrisisComputing/TBCOV/tree/main/preprocessing).
 
 # Meta-data file
+The meta-data file provides a convenient and faster way to retrieve tweets from the base files. The meta-data file holds the start and the end tweet-id of all base files. So, given a tweet-id file (e.g., a language or a country), the provided script determines which base files to parse to retrieve tweets matching the ids instead of parsing all two billion tweets.
+
 [meta_file_monthly_ids_range.tsv](https://github.com/CrisisComputing/TBCOV/blob/main/meta_data/meta_file_monthly_ids_range.tsv) file lists range of tweet IDs (between Start_id and End_id) contained in the specific monthly base file as follows:
 |File_name|Start_id|End_id|
 |--- |--- |--- |
 |february_2020_f1.tsv|1223395535882768385|1231201257739649025|
 
-This meta-data file will be used to extract tweet details from the base release pertaining to a specific language or country.
-
 # Parsing using meta-file
 In the folder [parsers](https://github.com/CrisisComputing/TBCOV/tree/main/parsers), there are two scripts that are needed to extract the tweet details from base release files, given a specific language or country IDs file.
 
 * [meta_file_parser.py](https://github.com/CrisisComputing/TBCOV/blob/main/parsers/meta_file_parser.py) requires two arguments as input.
-1. Country/Language IDs file 
+1. Country/Language IDs file
 1. [meta_file_monthly_ids_range.tsv](https://github.com/CrisisComputing/TBCOV/blob/main/meta_data/meta_file_monthly_ids_range.tsv)
 
 Sample to run the script is as follows:
 `python meta_file_parser.py [IDs file] meta_data/meta_file_monthly_ids_range.tsv`
 
-And it creates an output file name `required_monthly_files.txt` 
+And it creates an output file name `required_monthly_files.txt`
 The contents of the above file look something like this:
 `february_2020_f3.tsv
 february_2020_f2.tsv
 february_2020_f1.tsv`
 
 Each line indicates which monthly base file is required for download so that it can be used to extract tweet details with the help of the next script.
-
 
 * [base_file_data_extractor.py](https://github.com/CrisisComputing/TBCOV/blob/main/parsers/base_file_data_extractor.py) requires three arguments as input.
 1. `required_monthly_files.txt` which the output of the previous script
@@ -89,4 +88,3 @@ Sample to run the script is as follows:
 `python base_file_data_extractor.py required_monthly_files.txt test_for_meta_parsing.txt '/some/path'`
 
 The output will be a .tsv file which will have the same formate as montly base files.
-
