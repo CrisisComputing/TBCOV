@@ -69,13 +69,16 @@ In the folder [parsers](https://github.com/CrisisComputing/TBCOV/tree/main/parse
 1. [meta_file_monthly_ids_range.tsv](https://github.com/CrisisComputing/TBCOV/blob/main/meta_data/meta_file_monthly_ids_range.tsv)
 
 Sample to run the script is as follows:
+
 `python meta_file_parser.py [IDs file] meta_data/meta_file_monthly_ids_range.tsv`
 
 And it creates an output file name `required_monthly_files.txt`
 The contents of the above file look something like this:
-`february_2020_f3.tsv
+```
+february_2020_f3.tsv
 february_2020_f2.tsv
-february_2020_f1.tsv`
+february_2020_f1.tsv
+```
 
 Each line indicates which monthly base file is required for download so that it can be used to extract tweet details with the help of the next script.
 
