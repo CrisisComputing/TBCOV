@@ -86,7 +86,7 @@ Each line indicates which monthly base file is required for download so that it 
 1. Base release files path  (expects '/' at the end - for example - /home/downloads/)
 
 Sample to run the script is as follows:
-`python base_file_data_extractor.py required_monthly_files.txt test_for_meta_parsing.txt '/some/path'`
+`python base_file_data_extractor.py required_monthly_files.txt test_for_meta_parsing.txt '/some/path/'`
 
 The output will be a .tsv file which will have the same formate as montly base files.
 
