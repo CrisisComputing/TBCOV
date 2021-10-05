@@ -81,7 +81,7 @@ february_2020_f1.tsv
 ```
 
 Download the above files from [Crisis-NLP TBCov](https://crisisnlp.qcri.org/tbcov)
-Above list lists the files needed to be download. Make sure to download the full monthly base zip file to get the individual files stated in the `required_monthly_files.txt` file.
+It lists the monthly base files required to extract the full data from IDs files. Make sure to download the full monthly base zip file to get the individual files stated in the above `required_monthly_files.txt` file.
 
 Each line indicates which monthly base file is required for download so that it can be used to extract tweet details with the help of the next script.
 
