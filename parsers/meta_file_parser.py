@@ -13,7 +13,7 @@ meta_file_opened = open(sys.argv[2])
 
 meta_file_dict = {}
 
-output_file = open("required_monthly_files.txt", "w+")
+output_file = open(str(sys.argv[1].split('.')[0]) + "_required_monthly_files.txt", "w+")
 
 
 #This function is for inserting a value in a dictionary
